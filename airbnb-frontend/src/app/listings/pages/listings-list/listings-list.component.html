@@ -1,0 +1,13 @@
+<!-- Search bar below navbar -->
+<app-search-bar (onSearch)="applySearch($event)"></app-search-bar>
+
+<h2 class="title">Available Listings</h2>
+
+<div *ngIf="loading" class="loading">Loading...</div>
+
+<div class="listings-grid">
+  <app-listing-card
+    *ngFor="let listing of filteredListings"
+    [listing]="listing">
+  </app-listing-card>
+</div>

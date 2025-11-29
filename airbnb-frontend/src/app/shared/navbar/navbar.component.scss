@@ -1,0 +1,41 @@
+// .navbar {
+//   padding: 0 20px;
+
+//   .brand {
+//     font-size: 20px;
+//     font-weight: bold;
+//     cursor: pointer;
+//   }
+
+//   .spacer {
+//     flex: 1;
+//   }
+
+//   button {
+//     margin-left: 10px;
+//   }
+// }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff385c;
+    cursor: pointer;
+  }
+
+  .center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right {
+    display: flex;
+    gap: 12px;
+  }
+}

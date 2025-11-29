@@ -1,0 +1,35 @@
+<div class="container" *ngIf="listing">
+
+  <h1>{{ listing.title }}</h1>
+  <p>{{ listing.description }}</p>
+
+  <div class="photos">
+    <img *ngFor="let p of listing.photos" [src]="p.url" />
+  </div>
+
+  <h3>Book this property</h3>
+  <form [formGroup]="form" (ngSubmit)="book()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Start date</mat-label>
+      <input matInput [matDatepicker]="sd" formControlName="startDate">
+      <mat-datepicker-toggle matSuffix [for]="sd"></mat-datepicker-toggle>
+      <mat-datepicker #sd></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>End date</mat-label>
+      <input matInput [matDatepicker]="ed" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="ed"></mat-datepicker-toggle>
+      <mat-datepicker #ed></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">
+      Book Now
+    </button>
+
+  </form>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+
+</div>

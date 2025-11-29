@@ -1,0 +1,10 @@
+<mat-toolbar class="navbar" color="white">
+  <span class="logo" routerLink="/">Airbnb Clone</span>
+
+  <span class="spacer"></span>
+
+  <!-- Auth buttons -->
+  <button mat-button routerLink="/auth/login" *ngIf="!auth.isLoggedIn()">Login</button>
+  <button mat-button routerLink="/auth/register" *ngIf="!auth.isLoggedIn()">Register</button>
+  <button mat-button (click)="logout()" *ngIf="auth.isLoggedIn()">Logout</button>
+</mat-toolbar>

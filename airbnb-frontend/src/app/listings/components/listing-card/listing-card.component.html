@@ -1,0 +1,9 @@
+<div class="card">
+  <img [src]="listing.photos?.[0]?.url" class="photo">
+
+  <div class="info" [routerLink]="['/listings', listing.id]">
+    <h3>{{ listing.title }}</h3>
+    <p>{{ listing.address }}</p>
+    <p class="price">₹{{ listing.pricePerNight }} / night</p>
+  </div>
+</div>

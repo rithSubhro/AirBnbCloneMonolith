@@ -1,0 +1,24 @@
+.search-bar {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .1);
+  margin: 20px auto;
+  width: 80%;
+
+  .field {
+    flex: 1;
+  }
+
+  .small {
+    width: 120px;
+  }
+
+  .search-btn {
+    height: 56px;
+    padding: 0 24px;
+    border-radius: 28px;
+  }
+}

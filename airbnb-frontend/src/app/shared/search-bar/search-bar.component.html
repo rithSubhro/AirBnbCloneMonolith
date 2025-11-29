@@ -1,0 +1,33 @@
+<div class="search-bar">
+
+  <!-- WHERE -->
+  <mat-form-field appearance="outline" class="field">
+    <mat-label>Where</mat-label>
+    <input matInput placeholder="Search destinations" formControlName="location" />
+  </mat-form-field>
+
+  <!-- WHEN -->
+  <mat-form-field appearance="outline" class="field">
+    <mat-label>Dates</mat-label>
+    <mat-date-range-input 
+      [rangePicker]="picker" 
+      formGroupName="dateRange">
+      <input matStartDate placeholder="Start date" formControlName="startDate">
+      <input matEndDate placeholder="End date" formControlName="endDate">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+  <!-- WHO -->
+  <mat-form-field appearance="outline" class="field small">
+    <mat-label>Guests</mat-label>
+    <input matInput type="number" min="1" formControlName="guests">
+  </mat-form-field>
+
+  <!-- SEARCH -->
+  <button mat-raised-button color="primary" class="search-btn" (click)="search()">
+    Search
+  </button>
+
+</div>
